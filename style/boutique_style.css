@@ -1,0 +1,155 @@
+#shopping
+{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    min-height: 50vh;
+    background: var(--background_shopping);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_gallery
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 20px 20px;
+}
+
+#img_gallery img 
+{
+  width: 60px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+#img_gallery img:hover {
+  transform: scale(1.1);
+}
+
+#img_post_up {
+  margin-bottom: 20px;
+}
+
+#img_post_up img {
+
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+#shopping_form
+{
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  margin: 20px 0 20px 20px;
+}
+
+#shopping_form h2
+{
+  position: relative;
+  font-family: 'Oswald',sans-serif;
+  font-size: 2rem;
+}
+
+#shopping_form h3
+{
+  padding: 10px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#shopping_form h4
+{
+  padding: 10px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#shopping_form input[type=button]
+{
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 10px !important;
+  font-family: 'Lato', sans-serif;
+}
+
+#shopping_form input[type=button]:hover
+{
+  background: black;
+  color: white;
+}
+
+#height_container
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#shopping_form label
+{
+  font-family: 'Lato', sans-serif;
+  padding: 10px 0;
+}
+
+#shopping_form input[type=number]
+{
+  border: 1px solid black;
+  font-family: 'Lato',sans-serif;
+  width: 100px;
+}
+
+#shopping_form p
+{
+  padding: 10px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+#shopping_form input[type=submit]
+{
+  background: var(--background_button);
+  font-family: 'Lato', sans-serif;
+  box-shadow: 1px 1px black;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
+
+#shopping_form input[type=submit]:hover
+{
+  color: white;
+  background: black;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #shopping {
+        flex-direction: column;
+    }
+    #img_gallery {
+      flex-direction: row;
+    }
+    #img_post_up {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #img_post_up img {
+        width: 90%; 
+    }
+
+    #shopping_form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #shopping_form h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
