@@ -36,7 +36,6 @@ nav
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 nav ul
 {
@@ -48,7 +47,7 @@ nav ul
 }
 nav ul li
 {
-    padding: 50px;
+    padding: 20px;
 }
 nav li a
 {
@@ -149,33 +148,38 @@ nav li a:hover
 
 .shipping_animation
 {
-    width: 55vh;
-    display: flex;
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    animation: shipping 5s linear infinite;
+    padding: 0 1rem;
+    white-space: nowrap;
+    animation: shipping 8s ease-in-out infinite;
 }
 
 @keyframes shipping {
   0% {
-    transform: translate(0);
+    transform: translateX(-100vw);
   }
-
-  30% {
-    transform: translate(37.5vw);
+  40% {
+    transform: translateX(calc(50vw - 50%));
   }
   60% {
-    transform: translate(37.5vw);
+    transform: translateX(calc(50vw - 50%));
   }
   100% {
-    transform: translate(70vw);
+    transform: translateX(100vw);
   }
 }
 
 #home_btn
 {
-    position: relative;
-    top: 70%;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 10px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -190,7 +194,7 @@ nav li a:hover
 
 #home_btn:hover
 {
-    transform: scale(1.2);
+    font-size: 1.2rem;
 }
 
 
@@ -198,9 +202,9 @@ nav li a:hover
 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background: var(--background_collection);
-    padding: 20px 0;
+    padding: 20px 0 30px;
 }
 
 .collection_title
@@ -224,7 +228,7 @@ nav li a:hover
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    margin: 30px 30px;
+    margin: 20px;
     font-size: 2rem;
     color: white;
     border-radius: 25px;
@@ -293,7 +297,13 @@ nav li a:hover
     background: var(--backgorund_about);
     display: flex;
 }
-
+.about img
+{
+    position: relative;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
 .description
 {
     margin: 20px;
@@ -320,8 +330,9 @@ nav li a:hover
 {
     position: relative;
     width: 100%;
-    height: 70vh;
+    min-height: 55vh;
     background: var(--background_opinion);
+    padding: 30px 0;
 }
 
 .opinion h2
@@ -368,8 +379,9 @@ nav li a:hover
 {
     position: relative;
     width: 100%;
-    height: 130vh;
+    min-height: 90vh;
     background: var(--background_contact);
+    padding: 40px 0;
 }
 .contact_desc
 {
@@ -532,6 +544,32 @@ textarea
   color: #333;
   font-size: 14px;
 }
+
+@media screen and (min-height:563.34px) {
+    .home {
+        height: auto;
+        padding-top: 50px;
+    }
+    .home h1 {
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    .home img {
+        width: 50%;
+    }
+    .bars li {
+        width: 100%;
+        height: 100vh;
+    }
+    .about {
+        width: auto;
+        height: auto;
+    }
+    .contact {
+        height: auto;
+    }
+
+}
 @media screen and (max-width:1000px) {
     .collection ul
     {
@@ -591,16 +629,16 @@ textarea
     }
     @keyframes shipping   {
         0% {
-        transform: translate(0);
+            transform: translateX(-100%);
         }
-        30% {
-            transform: translate(60%);
+        40% {
+            transform: translateX(0);
         }
         60% {
-            transform: translate(60%);
+            transform: translateX(0);
         }
         100% {
-        transform: translate(90%);
+            transform: translateX(100vw);
         }
     }
 
@@ -616,6 +654,10 @@ textarea
     .about {
         height: auto;
         flex-direction: column;
+    }
+    .about img {
+        width: 100%;
+        margin: 20px 0;
     }
 
     .description h2 {
@@ -703,16 +745,19 @@ textarea
     }
     @keyframes shipping   {
         0% {
-        transform: translate(-50%);
+            transform: translateX(-100%);
         }
-        30% {
-            transform: translate(2.5%);
+        40% {
+            transform: translateX(0);
         }
         60% {
-            transform: translate(2.5%);
+            transform: translateX(0);
         }
         100% {
-        transform: translate(50%);
-        }
+            transform: translateX(100vw);
+       }
+    }
+    #home_btn:hover {
+        font-size: 1rem;
     }
 }
