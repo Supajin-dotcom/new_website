@@ -295,8 +295,14 @@ const addToSnipcart = () => {
     description: product.description[0],
     url: '/',
     customFields: [
-      { name: "Texture", value: formState.texture },
-      { name: "Longueur", value: formState.height + " pouces" }
+      { 
+        name: "Texture",
+        value: formState.texture 
+      },
+      { 
+        name: "Longueur",
+        value: formState.height + " pouces"
+      }
     ]
   });
 };
