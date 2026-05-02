@@ -293,7 +293,7 @@ const addToSnipcart = () => {
     quantity: formState.quantity,
     image: product.images[0],
     description: product.description[0],
-    url: '/',
+    url: 'https://plank-gestate-hatching.ngrok-free.dev',
     customFields: [
       { 
         name: "Texture",
