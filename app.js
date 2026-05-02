@@ -301,7 +301,7 @@ const addToSnipcart = () => {
       },
       { 
         name: "Longueur",
-        value: formState.height + " pouces"
+        value: String(formState.height) + " pouces"
       }
     ]
   });
