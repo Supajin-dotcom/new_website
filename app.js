@@ -68,7 +68,14 @@ collectionBtns.forEach((btn) => {
 });
 
 const createHTMLinterface = (productKey) => {
-  formState = {...formState,productKey}
+  formState = {...formState,
+    productKey,
+    price: products[productKey].prices[0], 
+    quantity: 1,
+    texture: null,
+    height: null
+  };
+    
   createShopping();
   createFormShopping(productKey);
   createImgShopping(productKey);
@@ -207,18 +214,20 @@ const changeFormTemplate = (productKey) => {
 const changeFormTexture = (productKey) => {
   const form = document.querySelector("#shopping_form");
   const textures = products[productKey].textures;
+  const referenceNode = form.querySelector("h4:nth-of-type(2)");
 
   textures.forEach(texture => {
     const btn = document.createElement("input");
     btn.type = "button";
     btn.value = texture;
     btn.name = "texture";
+    btn.className = "texture-btn"; // Pour le CSS
 
     btn.addEventListener("click", () => {
       updateFormState("texture", texture);
     });
 
-    form.insertBefore(btn, form.querySelector("h4:nth-of-type(2)"));
+    form.insertBefore(btn, referenceNode);
   });
 };
 
@@ -259,7 +268,7 @@ const updateFormState = (type, value, productKey = formState.productKey) => {
 
     const heights = products[productKey].height;
     const prices = products[productKey].prices;
-    const i = heights.indexOf(parseInt(value));
+    const i = heights.indexOf(Number(value));
 
     if (i !== -1) {
       formState.price = prices[i];
