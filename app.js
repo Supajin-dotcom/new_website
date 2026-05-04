@@ -19,7 +19,7 @@ const products = {
     description: [
       "Découvrez l'excellence avec nos extension Raw hair. des cheveux 100% bruts et non transformés, provenant d'un seul donneur. Reconnus pour leur texture naturelle authentique, leur résistance à toute épreuve et leur brillance éclatante, nos Raw hair sont un investissement durable dans votre beauté. Leur polyvalence exceptionnelle vous permet de les teindre jusqu’à la teinte 613, de les coiffer selon vos envies et de les lisser thermiquement, tout en conservant leur souplesse et en restant sans enchevêtrement pour une longue durée. Faites l'expérience de la qualité supérieure avec nos Raw hair.",
     ],
-    images: ["../img/RAW_1.png", "../img/RAW_2.png"],
+    images: ["../img/RAW_1.png"],
     prices: createArray(13, 23, 10),
     height: createArray(6,15,2),
     textures:['Straight']
@@ -27,7 +27,7 @@ const products = {
   virgin: {
     title: "Virgin Hair",
     description: ["Virgin : ne cherchez plus ! Vous avez trouvé exactement ce dont vous rêviez avec nos extensions Virgin hair. Nous vous offrons la meilleure qualité disponible et ce, à des prix absolument abordables , restent sans enchevêtrement pour un confort optimal et vous offrent une liberté totale. Elles peuvent être teintes jusqu\’à la couleur # 27 et avec une entretien approprié elles durent entre 1-2 ans. Offrez-vous l'excellence sans vous ruiner !"],
-    images: ["../img/VIRGIN_1.png"],
+    images: ["../img/VIRGIN_1.png", "../img/VIRGIN_2.png"],
     prices: createArray(10, 20, 10),
     height: createArray(6,15,2),
     textures:['Straight','Body Wave']
@@ -302,7 +302,7 @@ const addToSnipcart = () => {
     quantity: formState.quantity,
     image: product.images[0],
     description: product.description[0],
-    url: 'https://luxuryrawhair.netlify.app',
+    url: 'https://luxuryrawhair.netlify.app/',
     customFields: [
       { 
         name: "Texture",
